@@ -21,7 +21,8 @@ const TransactionHistoryScreen = () => {
     const [refreshing, setRefreshing] = useState(false);
 
     useEffect(() => {
-        const sortedTransactions = sampleTransactions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        let fetchedTransactions: Transaction[] = sampleTransactions 
+        let sortedTransactions = fetchedTransactions.sort((a, b) =>  b.oriDate.getTime() - a.oriDate.getTime());
         dispatch(setTransactions(sortedTransactions));
     }, []);
 
@@ -32,7 +33,8 @@ const TransactionHistoryScreen = () => {
     const handleRefresh = async () => {
         setRefreshing(true);
         pullRefreshAddRandomTransactions();
-        const sortedTransactions = sampleTransactions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        let fetchedTransactions: Transaction[] = sampleTransactions 
+        const sortedTransactions = fetchedTransactions.sort((a, b) => b.oriDate.getTime() - a.oriDate.getTime());
         dispatch(setTransactions(sortedTransactions));
         setRefreshing(false);
     };

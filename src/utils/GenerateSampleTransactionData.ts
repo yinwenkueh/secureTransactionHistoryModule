@@ -24,6 +24,7 @@ const generateRandomTransaction = (fixDate: boolean): Transaction => {
     currency: randomCurrency,
     amount: randomAmount,
     date: format(randomDate, 'dd MMM yyyy - hh:mm a'),
+    oriDate : randomDate,
     description: randomDescription,
     type: randomType,
     remark: randomRemark,
