@@ -21,8 +21,8 @@ const TransactionHistoryScreen = () => {
     const [refreshing, setRefreshing] = useState(false);
 
     useEffect(() => {
-        let fetchedTransactions: Transaction[] = sampleTransactions 
-        let sortedTransactions = fetchedTransactions.sort((a, b) =>  b.oriDate.getTime() - a.oriDate.getTime());
+        let fetchedTransactions: Transaction[] = sampleTransactions
+        let sortedTransactions = fetchedTransactions.sort((a, b) => b.oriDate.getTime() - a.oriDate.getTime());
         dispatch(setTransactions(sortedTransactions));
     }, []);
 
@@ -33,7 +33,7 @@ const TransactionHistoryScreen = () => {
     const handleRefresh = async () => {
         setRefreshing(true);
         pullRefreshAddRandomTransactions();
-        let fetchedTransactions: Transaction[] = sampleTransactions 
+        let fetchedTransactions: Transaction[] = sampleTransactions
         const sortedTransactions = fetchedTransactions.sort((a, b) => b.oriDate.getTime() - a.oriDate.getTime());
         dispatch(setTransactions(sortedTransactions));
         setRefreshing(false);
@@ -78,13 +78,16 @@ const TransactionHistoryScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.header}>
-                <Text style={styles.genericText}>seaMoney Account</Text>
-                <SecureDataViewer type={'acc'} data={accNumber} style={styles.accountNumber} />
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 15 ,alignItems:'center' }}>
+                <View style={styles.header}>
+                    <Text style={styles.genericText}>seaMoney Account</Text>
+                    <SecureDataViewer type={'acc'} data={accNumber} style={styles.accountNumber} />
+                </View>
                 {!isAuthForSensitiveData ?
                     <TouchableOpacity onPress={handleFullDetailsPress} style={styles.fullDetailsButton}>
                         <Text style={styles.genericText}>See full details</Text>
                     </TouchableOpacity> : null}
+                <LogoutButton onPress={handleLogout} />
             </View>
             <FlatList
                 data={transactions}
@@ -93,7 +96,6 @@ const TransactionHistoryScreen = () => {
                 keyExtractor={(item, index) => `${index}`}
                 refreshControl={<RefreshControl refreshing={refreshing} onRefresh={handleRefresh} />}
             />
-            <LogoutButton onPress={handleLogout} />
         </SafeAreaView>
     );
 };
@@ -105,7 +107,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#00bfff'
     },
     header: {
-        width: '100%',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
@@ -122,7 +123,6 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
     fullDetailsButton: {
-        width: '90%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#00bfff',
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'white',
         borderRadius: 8,
-        marginBottom: 10,
+        margin: 5,
     },
     transactionList: {
         flexGrow: 1,
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     },
     primaryText: {
         color: '#434343'
-    }, 
+    },
     secondaryText: {
         color: 'grey', fontSize: 12
     },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, Platform } from 'react-native';
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 
@@ -17,11 +17,7 @@ const LogoutButton: React.FC<LogoutButtonProps> = ({ onPress }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#00bfff',
     borderRadius: 8,
-    position: 'absolute',
-    top: 30,
-    right: 10,
   },
   icon: {
     justifyContent:'center',

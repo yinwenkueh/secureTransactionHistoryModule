@@ -30,6 +30,7 @@ const TransactionDetailScreen = ({ route }: TransactionDetailProps) => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <BackButton onPress={handleBack} />
             <View style={styles.card}>
                 {transaction.type === 'Credit' ?
                     <Text style={styles.headerTextCredit}>{transaction.currency}{transaction.amount}</Text> :
@@ -58,7 +59,6 @@ const TransactionDetailScreen = ({ route }: TransactionDetailProps) => {
                 <Text style={styles.primaryText}>Report an issue</Text>
             </View>
 
-            <BackButton onPress={handleBack} />
         </SafeAreaView>
     );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, Platform } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, Platform, SafeAreaView } from 'react-native';
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/dist/MaterialIcons';
 
@@ -20,10 +20,8 @@ const BackButton: React.FC<BackButtonProps> = ({ onPress }) => {
 
 const styles = StyleSheet.create({
     button: {
+        margin:15,
         borderRadius: 8,
-        position: 'absolute',
-        top: 30, 
-        left: 10, 
     },
     icon: {
         justifyContent: 'center',
