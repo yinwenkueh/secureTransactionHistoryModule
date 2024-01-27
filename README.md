@@ -1,27 +1,24 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# What's this
+Secure Transaction history modulee using React Native and TypeScript. Required biometric device for login.
 
-# Getting Started
-
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
+## Step 1: Installation node module
 ```bash
-# using npm
-npm start
+# using npm 
+npm install
 
 # OR using Yarn
-yarn start
+yarn add
+```
+
+## For iOS
+```bash
+#need to do pod install before start iOS application 
+cd iod
+pod install
+cd ../
 ```
 
 ## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
 ### For Android
 
 ```bash
@@ -41,39 +38,20 @@ npm run ios
 # OR using Yarn
 yarn ios
 ```
+## Demo Video 
+![ezgif-5-27dd665ce3](https://github.com/yinwenkueh/secureTransactionHistoryModule/assets/128566871/4080bd97-9d62-4c81-bd02-e0e8776cd936)
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Screenshot 
+### Login Page
+![Simulator Screenshot - iPhone 15 Pro - 2024-01-27 at 19 56 54](https://github.com/yinwenkueh/secureTransactionHistoryModule/assets/128566871/735080ed-92c9-4d29-8f4d-73db724875ea)
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Transaction History  - Before Biometric
+![Simulator Screenshot - iPhone 15 Pro - 2024-01-27 at 19 57 14](https://github.com/yinwenkueh/secureTransactionHistoryModule/assets/128566871/1acda001-3c1f-477d-b9d6-f3c20c614e7c)
 
-## Step 3: Modifying your App
+### Transaction History  - After Biometric
+![Simulator Screenshot - iPhone 15 Pro - 2024-01-27 at 19 57 26](https://github.com/yinwenkueh/secureTransactionHistoryModule/assets/128566871/beee568e-cb43-422c-a2d0-6de66cec15f5)
 
-Now that you have successfully run the app, let's modify it.
+### Transaction History Detail
+![Simulator Screenshot - iPhone 15 Pro - 2024-01-27 at 19 24 40](https://github.com/yinwenkueh/secureTransactionHistoryModule/assets/128566871/2395be2a-42ea-4d61-8308-45d9a22d03d7)
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
